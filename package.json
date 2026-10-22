@@ -1,0 +1,59 @@
+{
+  "name": "dsh-persona-mask",
+  "version": "2.0.0",
+  "private": false,
+  "description": "给 Harness 助手换一副人格：设置页里直接开关和切换，或自定义说话风格。傲娇、猫娘、冷面工程师、温柔导师、诗人、大肥鱼。只改变语气，不改变事实与安全。",
+  "type": "module",
+  "license": "MIT",
+  "author": "AsuKa-EL",
+  "homepage": "https://github.com/AsuKa-EL/dsh-persona-mask#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsuKa-EL/dsh-persona-mask.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AsuKa-EL/dsh-persona-mask/issues"
+  },
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js",
+    "test": "node test/host.mjs && node test/client.mjs && node test/bundle.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "persona",
+    "personality",
+    "settings",
+    "人格"
+  ],
+  "dsh": {
+    "category": "extension",
+    "displayName": "人格面具",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}

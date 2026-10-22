@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Persona mask">
+  <defs>
+    <linearGradient id="persona-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#161832"/>
+      <stop offset="1" stop-color="#0b0c19"/>
+    </linearGradient>
+    <linearGradient id="persona-mask" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#8b6cff"/>
+      <stop offset="0.55" stop-color="#5d7bff"/>
+      <stop offset="1" stop-color="#2fd0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="58" fill="url(#persona-bg)"/>
+  <path fill="url(#persona-mask)" d="M128 34c38 0 68 22 68 66 0 50-30 96-68 112-38-16-68-62-68-112 0-44 30-66 68-66Z"/>
+  <ellipse cx="101" cy="105" rx="12" ry="17" fill="#0d0f1d"/>
+  <ellipse cx="155" cy="105" rx="12" ry="17" fill="#0d0f1d"/>
+  <path d="M101 154c14 15 40 15 54 0" fill="none" stroke="#0d0f1d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M196 44l4.6 11.4L212 60l-11.4 4.6L196 76l-4.6-11.4L180 60l11.4-4.6L196 44Z" fill="#8b6cff" opacity="0.92"/>
+  <circle cx="58" cy="196" r="5" fill="#2fd0ff" opacity="0.8"/>
+</svg>

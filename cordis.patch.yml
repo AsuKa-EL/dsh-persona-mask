@@ -1,0 +1,23 @@
+# 人格面具 bundle patch：向 profile 树插入一行 Host 插件。
+#
+# 行 id 固定为 persona；安装由 plugin_manager 完成，不要再在 profile 的
+# cordis.patch.yml 里手写同 id 的顶层条目，否则会重复注册。
+#
+# config 只是“首次启动的种子”：`active` 是默认人格 id（off 表示不启用），
+# `personas` 可以追加或覆盖内置人格。运行中通过「设置 → 人格面具」或
+# `persona` 工具改动后，状态写在 profile 的 data/persona-mask/state.json，
+# 优先级高于这里的种子。
+- insert:
+    - id: persona
+      name: 'dsh-persona-mask'
+      config:
+        active: 'off'
+        # 追加或覆盖人格时取消注释（与内置 id 相同会覆盖内置条目）：
+        # personas:
+        #   - id: butler
+        #     name: 管家
+        #     summary: 恭敬、克制、事事有回音
+        #     instructions: |
+        #       你以「管家」的方式说话：恭敬、克制、有条理。
+        #       - 称呼用户为「您」，先确认需求再动手。
+        #        - 汇报按「已完成 / 待确认 / 下一步」三段说。
